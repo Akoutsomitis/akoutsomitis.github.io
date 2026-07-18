@@ -440,6 +440,34 @@
     .lp-ocean, .lp-ocean::after, .lp-sparkle, .lp-float-item{ animation:none !important; }
   }
 
+  /* ===== mobile ===== */
+  #lpWrap{ min-height:780px; }
+
+  @media (max-width: 700px){
+    .page{
+      margin:10px;
+      border-radius:14px;
+      box-shadow:6px 6px 0 rgba(139,111,219,0.35);
+    }
+    header{ padding:10px 14px; gap:12px; }
+    .logo-img{ height:64px; }
+    nav{ gap:14px; }
+    nav a{ font-size:13px; }
+    nav a .ic{ font-size:18px; }
+  }
+
+  @media (max-width: 520px){
+    header{ justify-content:center; }
+    #lpWrap{ min-height:600px; }
+    .lp-scene{ min-height:600px; padding:34px 14px 30px; gap:20px; }
+    .lp-mouse-wrap{ right:4px; }
+    .lp-cable{ left:-64px; width:96px; }
+    .lp-portal-content{ padding:18px 14px 30px; }
+    .lp-close{ top:12px; right:12px; }
+    .lp-art img{ height:240px; }
+    .lp-lightbox{ padding:16px; }
+  }
+
 </style>
 </head>
 <body>
@@ -454,7 +482,7 @@
     </nav>
   </header>
 
-<div id="lpWrap" style="position:relative; min-height:780px; overflow:hidden;">
+<div id="lpWrap" style="position:relative; overflow:hidden;">
 
 
   <div class="lp-ocean" aria-hidden="true"></div>
