@@ -217,11 +217,29 @@
     padding:0 10px;
     z-index:2;
   }
-  .lp-console-strip .lp-dot{ width:10px; height:10px; border:3px solid var(--lp-ink); border-radius:50%; }
+  .lp-console-strip .lp-power{
+    position:relative;
+    width:20px; height:20px;
+    border:3px solid var(--lp-ink); border-radius:50%;
+    background:var(--lp-violet);
+  }
+  .lp-console-strip .lp-power::before{
+    content:""; position:absolute;
+    width:5px; height:5px;
+    border:1.5px solid var(--lp-ink); border-top-color:transparent;
+    border-radius:50%;
+    left:50%; top:50%; transform:translate(-50%,-50%);
+  }
+  .lp-console-strip .lp-power::after{
+    content:""; position:absolute;
+    width:1.5px; height:5px;
+    background:var(--lp-ink); border-radius:1px;
+    left:50%; top:2px; transform:translateX(-50%);
+  }
+  .lp-console-strip .lp-dot{ width:8px; height:8px; border:2px solid var(--lp-ink); border-radius:50%; }
   .lp-console-strip .lp-dot.lp-o{ background:var(--lp-orange); }
   .lp-console-strip .lp-dot.lp-g{ background:var(--lp-grass); }
-  .lp-console-strip .lp-dot.lp-y{ background:var(--lp-sun); }
-  .lp-console-strip .lp-bar{ flex:1; height:6px; background:var(--lp-violet); border:2px solid var(--lp-ink); border-radius:4px; }
+  .lp-console-strip .lp-bar{ width:46%; margin-left:auto; height:8px; background:var(--lp-violet); border:2px solid var(--lp-ink); border-radius:4px; }
 
   .lp-desk-row{
     position:relative;
@@ -528,9 +546,9 @@
             </div>
           </div>
           <div class="lp-console-strip">
-            <div class="lp-dot lp-o"></div>
+            <div class="lp-power"></div>
             <div class="lp-dot lp-g"></div>
-            <div class="lp-dot lp-y"></div>
+            <div class="lp-dot lp-o"></div>
             <div class="lp-bar"></div>
           </div>
         </div>
@@ -542,13 +560,14 @@
             <path d="M24,50 C24,30 10,24 10,4" stroke="#161018" stroke-width="5" fill="none" stroke-linecap="round"/>
           </svg>
           <div class="lp-keyboard" aria-hidden="true">
+            <div class="lp-key"></div><div class="lp-key"></div><div class="lp-key"></div>
+            <div class="lp-key"></div><div class="lp-key"></div><div class="lp-key"></div>
+            <div class="lp-key"></div><div class="lp-key"></div><div class="lp-key"></div>
+            <div class="lp-key"></div><div class="lp-key"></div><div class="lp-key"></div>
+            <div class="lp-key"></div><div class="lp-key"></div><div class="lp-key"></div>
+            <div class="lp-key"></div><div class="lp-key"></div><div class="lp-key"></div>
+            <div class="lp-key"></div><div class="lp-key"></div><div class="lp-key"></div>
             <div class="lp-key lp-wide"></div>
-            <div class="lp-key"></div><div class="lp-key"></div><div class="lp-key"></div>
-            <div class="lp-key"></div><div class="lp-key"></div><div class="lp-key"></div>
-            <div class="lp-key"></div><div class="lp-key"></div><div class="lp-key"></div>
-            <div class="lp-key"></div><div class="lp-key"></div><div class="lp-key"></div>
-            <div class="lp-key"></div><div class="lp-key"></div><div class="lp-key"></div>
-            <div class="lp-key"></div><div class="lp-key"></div><div class="lp-key"></div>
             <div class="lp-key"></div><div class="lp-key"></div><div class="lp-key"></div>
           </div>
         </div>
