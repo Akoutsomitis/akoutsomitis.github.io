@@ -247,8 +247,11 @@
   @media (prefers-reduced-motion: reduce){ .hdr-buddy{ animation:none; } }
   @media (max-width: 900px){ .hdr-buddy-img{ height:104px; } }
   @media (max-width: 620px){
-    .hdr-buddy{ margin:0 auto; }
-    .hdr-buddy-img{ height:78px; }
+    /* buddy floats top-right, out of flow, so the logo stays centred */
+    header{ justify-content:center; }
+    header nav{ order:3; flex:1 0 100%; justify-content:center; }
+    .hdr-buddy{ position:absolute; top:16px; right:16px; margin:0; }
+    .hdr-buddy-img{ height:72px; }
   }
 
   .lp-rig{
@@ -1204,6 +1207,14 @@
     .lp-lightbox{ padding:16px; }
   }
 
+
+  @media (max-width: 360px){
+    /* narrow phones: scale both down so the centred logo clears the buddy.
+       padding keeps the tap target >=44px while the art sits at top:14 right:12 */
+    .logo-img{ height:64px; }
+    .hdr-buddy{ top:10px; right:8px; padding:4px; }
+    .hdr-buddy-img{ height:60px; }
+  }
 </style>
 </head>
 <body>
